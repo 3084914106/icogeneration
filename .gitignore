@@ -1,0 +1,14 @@
+# 环境变量（含 API Key）
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 输出图片（可选，看你愿不愿意提交）
+output/
+
+# IDE
+.vscode/
+.idea/
