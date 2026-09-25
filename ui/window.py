@@ -18,7 +18,7 @@ def get_user_input():
     root.title("输入窗口")
 
     # 设置窗口尺寸：宽400 × 高220（比原版高一些，因为多了一个数量输入框）
-    root.geometry("400x220")
+    root.geometry("300x200")
 
     # ---- 第一行：prompt 输入 ----
 
@@ -35,13 +35,6 @@ def get_user_input():
     # 创建标签，提示用户输入生成数量
     tk.Label(root, text="生成数量：", font=("SimHei", 12)).pack(pady=5)
 
-    # 创建数量输入框
-    count_entry = tk.Entry(root, font=("SimHei", 11), width=10)
-    # 预设默认值为 "5"
-    count_entry.insert(0, "5")
-    # 放置到窗口
-    count_entry.pack()
-
     # 用字典存储返回结果，方便嵌套函数修改
     result = {}
 
@@ -50,7 +43,7 @@ def get_user_input():
         # 读取 prompt 输入框内容，去掉首尾空格
         result["prompt"] = entry.get().strip()
         # 读取 count 输入框内容，转换为整数
-        result["count"] = int(count_entry.get())
+        result["count"] = 1
         # 关闭窗口，退出 mainloop
         root.destroy()
 
